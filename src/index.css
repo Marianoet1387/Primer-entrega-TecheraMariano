@@ -1,0 +1,14 @@
+*{
+    margin: 8px;
+    padding: 0% ;
+}
+.ContainerNavBar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.CartWidget {
+    display:flex;
+    flex-flow: row nowrap  ;
+}
