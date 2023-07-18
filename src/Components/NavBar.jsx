@@ -2,16 +2,17 @@ import React from 'react'
 import {Menu, MenuButton, Button, MenuList, MenuItem } from '@chakra-ui/react'
 import {ChevronDownIcon } from '@chakra-ui/icons'
 import CartWidget from './CartWidget'
+import imgLogo from '../img/iconLogo.png'
 
 const NavBar = () => {
   return (
       <div className="ContainerNavBar" >
-          <h1>Mobil</h1>
-          <Menu className="Menu">
-              <MenuButton className="MenuButton" as={Button} rightIcon={<ChevronDownIcon />}>
+          <img className="imgLogo" src={imgLogo} alt=" img Logo" />
+          <Menu >
+              <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
                   Celulares
               </MenuButton>
-              <MenuList className="MenuList">
+              <MenuList >
                   <MenuItem >Quienes somos</MenuItem>
                   <MenuItem >Modelos</MenuItem>
                   <MenuItem >Contacto</MenuItem>
