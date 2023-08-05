@@ -1,12 +1,12 @@
 import React from 'react'
-import iconCarrito from '../img/iconCarrito.png'
+import iconCarrito from '../assets/iconCarrito.png'
 
-const CartWidget = () => {
+const CartWidget = ({}) => {
   return (
     <div className="CartWidget" >
       <img className="imgCarrito" src={iconCarrito} alt="Logo" />
       <p>5</p>
-    </div>
+    </div >
   )
 }
 

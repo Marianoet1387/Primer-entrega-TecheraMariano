@@ -23,3 +23,35 @@
     display: flex;
     justify-content: center;
 }
+
+.itemListContainer{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.itemList{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+.itemDetailContainer{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemCount{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.home{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
