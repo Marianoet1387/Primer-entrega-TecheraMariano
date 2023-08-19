@@ -1,12 +1,13 @@
 import { Card, CardBody, CardFooter,Text, Heading, Image, Button, Stack, Divider, ButtonGroup } from '@chakra-ui/react';
 import { Link } from 'react-router-dom'
 
-const Item = ({name, description, amount, image, id }) => {
+const Item = ({name, description, price, image, id, key }) => {
+
   return (
       <>
           <Card maxW='sm'>
-              <CardBody>
-                  <Image
+              <CardBody key={id}>
+                  <Image className='img-Card'
                       src={image}
                       alt='image movil'
                       borderRadius='lg'
@@ -15,7 +16,7 @@ const Item = ({name, description, amount, image, id }) => {
                       <Heading size='md'>{name}</Heading>
                       <Text>{description}</Text>
                       <Text color='blue.600' fontSize='2xl'>
-                          $ {amount}
+                          $ {price}
                       </Text>
                   </Stack>
               </CardBody>
