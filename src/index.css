@@ -47,6 +47,12 @@
     object-fit: cover;
     object-fit: contain;
 }
+.button-itemdetail {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
 .itemCount{
     display: flex;
     flex-flow: row wrap;

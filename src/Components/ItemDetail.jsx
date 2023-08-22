@@ -12,14 +12,12 @@ const ItemDetail = ({ products }) => {
   
   useEffect(() => {
     const db = getFirestore()
-
     const oneItem = doc(db, "phones", `${id}`)
-
     getDoc(oneItem).then((snapshot) => {
       if (snapshot.exists()) {
         setProduct(snapshot.data());
       } else {
-        console.log("No such document", product)
+        console.log("No such document")
       }
     })
   }, [])
@@ -46,16 +44,6 @@ const ItemDetail = ({ products }) => {
                 <Text py='2'>
                   {prod.description}
                 </Text>
-                <Link to={"/cart"}>
-                  <Button variant='solid' colorScheme='blue' size='lg'>
-                    Comprar
-                  </Button>
-                </Link>
-                <Link to={"/"}>
-                  <Button variant='solid' colorScheme='blue' size='lg'>
-                    Return
-                  </Button>
-                </Link>
               </CardBody>
               <CardFooter>
                 <ItemCount
@@ -63,6 +51,18 @@ const ItemDetail = ({ products }) => {
                   name={prod.name}
                   price={prod.price}
                 />
+                <div className='button-itemdetail'>
+                  <Link to={"/cart"}>
+                    <Button variant='solid' colorScheme='blue' size='lg'>
+                      Buy
+                    </Button>
+                  </Link>
+                  <Link to={"/"}>
+                    <Button variant='solid' colorScheme='blue' size='lg'>
+                      Return
+                    </Button>
+                  </Link>
+                </div>
               </CardFooter>
             </Stack>
           </Card>
