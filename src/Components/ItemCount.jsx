@@ -6,9 +6,9 @@ import { useContext } from 'react'
 const ItemCount = ({ name, id, price }) => {
     const { cart, setCart } = useContext(CartContext)
     const [ count, setCount] = useState(1)
-    const [quantity, setQuantity] =useState(1)
 
-    const addToCart = () => {
+/*  const [quantity, setQuantity] =useState(1)
+  const addToCart = () => {
         setCart((currItems) => {
             const isItemFound = currItems.find((item) => item.id === id)
             console.log(cart)
@@ -24,8 +24,14 @@ const ItemCount = ({ name, id, price }) => {
                 return [...currItems, { id, quantity: count, price, name }]
             }
         })
-    }
- 
+    }*/
+    const addToCart = (item, quantity)=>{
+        if (!isInCart(item.id)){
+          setCart(prev=>[...prev, {...item, quantity}])
+        }else{
+          console.error("ya fue agreagdo")
+        }
+      }
     const addQty = () => {
         setCount(count + 1)
     }
