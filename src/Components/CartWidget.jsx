@@ -1,16 +1,14 @@
-import React from 'react'
+import React, { useContext }from 'react'
 import iconCarrito from '../assets/iconCarrito.png'
-
 import { CartContext } from '../context/ShoppingCartContext'
-import { useContext } from 'react'
 
 const CartWidget = () => {
-  const { cart, setCart } = useContext(CartContext)
+  const { cartQuantity } = useContext(CartContext)
  
   return (
     <div className="CartWidget" >
       <img className="imgCarrito" src={iconCarrito} alt="Logo" />
-      <p>{cart}</p>
+      {cartQuantity() > 0 && <p>{cartQuantity()}</p>}
     </div >
   )
 }

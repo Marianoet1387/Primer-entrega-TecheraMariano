@@ -6,14 +6,14 @@ import {collection, getDocs, getFirestore} from 'firebase/firestore'
 
 const ItemListContainer = () => {
   const {category} = useParams()
-  
   const [products, setProducts] = useState([])
 
   useEffect(() => {
   const db = getFirestore()
   const itemsCollection = collection(db, "phones")
   getDocs(itemsCollection).then((snapshot) => {
-  const docs = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()}))
+  const docs = snapshot.docs.map((doc) =>
+   ({id: doc.id, ...doc.data()}))
     setProducts(docs)
   })
   },[] )
