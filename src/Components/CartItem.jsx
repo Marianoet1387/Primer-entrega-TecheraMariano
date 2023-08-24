@@ -4,8 +4,8 @@ import { CartContext } from "../context/ShoppingCartContext"
 const CartItem = ({item}) => {
     const {deletItem}= useContext(CartContext)
   return (
-    <div className='d-felx justify-content-around aling-items-center '>
-        <img src={item.image} alt={item.name} width={"140rem"}/>
+    <div className='cartItem'>
+        <img src={item.image} alt={item.name} />
         <p>{item.name}</p>
         <p>${item.price}</p>
         <p>Quantity: {item.quantity}</p>

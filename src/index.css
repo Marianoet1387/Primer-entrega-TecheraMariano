@@ -72,3 +72,9 @@
     align-items: center;
     justify-content: center;
 }
+.cartItem{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+}

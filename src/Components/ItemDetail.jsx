@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../context/ShoppingCartContext'
 
 const ItemDetail = ({ products }) => {
-  const [quantityAdded, setQuantityAdded] = useState("")
+  const [quantityAdded, setQuantityAdded] = useState(false)
   const {addItem} = useContext(CartContext)
   
   const onAdd = (quantity) => {
-    console.log(`${quantity}`)
-    setQuantityAdded(quantity)
+    addItem(quantity)
+    setQuantityAdded(true)
   }
   
   return (
