@@ -7,9 +7,11 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
     return (
         <div className="ContainerNavBar" >
-            <Link to={"/"}>
-                <img className="imgLogo" src={imgLogo} alt=" img Logo" />
-            </Link>
+            <div className='navbar-home'>
+                <Link to={"/"}>
+                <img className="imgLogo" title='Home' src={imgLogo} alt="Logo" />
+                </Link> 
+            </div>
             <Menu >
                 <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
                     Category

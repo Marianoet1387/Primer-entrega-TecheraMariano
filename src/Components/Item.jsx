@@ -15,7 +15,7 @@ const Item = ({name, description, price, image, id }) => {
                       <Heading size='md'>{name}</Heading>
                       <Text>{description}</Text>
                       <Text color='blue.600' fontSize='2xl'>
-                          $ {price}
+                      $USD {price}
                       </Text>
                   </Stack>
               </CardBody>

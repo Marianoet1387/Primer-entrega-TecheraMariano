@@ -4,10 +4,9 @@ import { CartContext } from '../context/ShoppingCartContext'
 
 const CartWidget = () => {
   const { cartQuantity } = useContext(CartContext)
- 
   return (
     <div className="CartWidget" >
-      <img className="imgCarrito" src={iconCarrito} alt="Logo" />
+      <img className="imgCarrito" src={iconCarrito} title='Cart'  alt="Logo" />
       {cartQuantity() > 0 && <p>{cartQuantity()}</p>}
     </div >
   )

@@ -10,6 +10,10 @@
     background-color: rgb(233, 232, 232);
     border-radius: 8px;
 }
+.navbar-home{
+    display: inline-block;
+    
+}
 .CartWidget {
     display:flex;
     flex-flow: row nowrap;
@@ -25,6 +29,8 @@
 }
 
 .itemListContainer{
+   
+    margin: 30px;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -72,9 +78,40 @@
     align-items: center;
     justify-content: center;
 }
+.Cart-container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
 .cartItem{
+    width: 750px;
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: space-around;
+}
+.cartItem img{
+    width: 150px;
+    height: 150px;
+}
+.cart-finalamount {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 20px;
+  
+}
+.cart-return{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: aliceblue;
 }

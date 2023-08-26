@@ -1,27 +1,33 @@
 import React,{ useContext }  from 'react'
-
+import { Button } from '@chakra-ui/react'
 import CartItem from './CartItem'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/ShoppingCartContext'
 
 const Cart = () => {
   const { cart, clear, total } = useContext(CartContext)
-
   return (
     <>
       {cart.length
-        ? <div>
-          {cart.map((item) => <CartItem key={item.id} item={item} />)}
-         
-          <div>
-             <p>Total a pagar: ${total()}</p>
-            <button onClick={clear}>Vaciar carrito</button>
-            <Link to="/checkout">Termine compra </Link>
+        ? <div className='Cart-container'>
+            {cart.map((item) => <CartItem key={item.id} item={item} />)}
+            <div className='cart-finalamount'>
+              <h1>Final amount: $USD {total()}</h1>
+              <Button variant='solid' colorScheme='red' size='md' onClick={clear}>Clear cart</Button>
+              <Button variant='solid' colorScheme='blue' size='md'> 
+                <Link to={"/checkout"}>
+                  Finalize purchase   
+                </Link>
+              </Button>
+            </div>
           </div>
-        </div>
-        : <div>
-          <h3>Tu carrito esta vacio</h3>
-          <Link to="/" /> Go to buy<Link />
+        : <div className='cart-finalamount'>
+            <h3>Your cart is empty</h3>
+            <Button variant='solid' colorScheme='blue' size='md' >
+              <Link to={"/"}> 
+                Go to buy
+              </Link>
+            </Button>
         </div>
       }
     </>

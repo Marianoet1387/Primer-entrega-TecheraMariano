@@ -9,7 +9,7 @@ const ItemDetail = ({ products }) => {
   const {addItem} = useContext(CartContext)
   
   const onAdd = (quantity) => {
-    addItem(quantity)
+    addItem(products,quantity)
     setQuantityAdded(true)
   }
   
@@ -22,7 +22,7 @@ const ItemDetail = ({ products }) => {
             variant='outline'>
             <Image
               objectFit='cover'
-              maxW={{ base: '100%', sm: '200px' }}
+              maxW={{ base: '100%', sm: '150px' }}
               src={products.image}
               alt={products.name}
             />
@@ -38,19 +38,21 @@ const ItemDetail = ({ products }) => {
                 !quantityAdded
                   ? <ItemCount initial={1} stock={products.stock} onAdd={onAdd} />
                   : <Link to={"/cart"}>
-                    <Button variant='solid' colorScheme='blue' size='lg'>
-                      Go to Cart
-                    </Button>
-                  </Link>
+                    <Button variant='solid' colorScheme='blue' size='md'>
+                      Go to the Cart
+                    </Button> 
+                  </Link>   
               }
-                { /* <Link to={"/"}>
-                    <Button variant='solid' colorScheme='blue' size='lg'>
-                      Return
-                    </Button>
-                </Link>*/}
               </CardFooter>
             </Stack>
           </Card>
+          <div className='cart-return'>
+              <Link to={"/"}>
+                    <Button variant='solid' colorScheme='blue' size='md'>
+                      Return
+                    </Button>
+                </Link>
+          </div>
         </div>
     </div>
   )

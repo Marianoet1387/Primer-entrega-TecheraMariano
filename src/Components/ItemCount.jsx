@@ -21,7 +21,7 @@ const ItemCount = ({ stock, onAdd, initial }) => {
                 <Button onClick={subtractQty} colorScheme='blue'>-</Button>
                 <h1>{count}</h1>
                 <Button onClick={addQty} colorScheme='blue'>+</Button>
-                <Button disabled ={count ===0} onClick={()=>onAdd(count)} colorScheme='blue'>
+                <Button disabled ={count === 0} onClick={()=>onAdd(count)} colorScheme='blue'>
                      Buy
                 </Button>
             </div>

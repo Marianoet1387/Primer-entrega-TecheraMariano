@@ -1,17 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect }  from 'react'
 import ItemListContainer from './ItemListContainer'
-import { useState, useEffect } from 'react'
 import Loading from './Loading'
-
 
 const Home = () => {
   const [loading, setLoading] = useState(true)
-
+  const timer = parseInt(Math.random() * 10000)
   useEffect(()=>{
     setTimeout(()=>{
       setLoading(false)
-    },3000)
-
+    },timer)
   },[])
 
   if (loading) {
@@ -19,7 +16,7 @@ const Home = () => {
   } 
   return (
     <div className='home'> 
-      Welcome to the online store 
+      <h1>Welcome to the online store </h1>
       <ItemListContainer />
     </div>
   )
