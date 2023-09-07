@@ -8,7 +8,7 @@
 	CartContext
 	CartWidget
 	Checkout
-	Se incorporo la libreria de Charkras. Se implemento estilos desde CSS
+	Se incorporo la libreria de Chakra-ui. Se implemento estilos desde CSS
 	Se configura en App.js el routing usando un BrowserRouter y navegacion a una ruta con parametros.
 	Conectado a servicios de google Firebase
 	
